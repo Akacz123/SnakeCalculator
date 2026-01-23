@@ -10,5 +10,22 @@ function gameLoop() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   snake.draw(ctx);
   requestAnimationFrame(gameLoop);
+  snake.update();
 }
 gameLoop();
+document.addEventListener("keydown", (event) => {
+  switch (event.key) {
+    case "ArrowUp":
+      snake.direction = { x: 0, y: -1 };
+      break;
+    case "ArrowDown":
+      snake.direction = { x: 0, y: 1 };
+      break;
+    case "ArrowLeft":
+      snake.direction = { x: -1, y: 0 };
+      break;
+    case "ArrowRight":
+      snake.direction = { x: 1, y: 0 };
+      break;
+  }
+});
