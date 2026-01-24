@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="gameBoard"></canvas>
+    <div id="gameContainer">
+      <div id="scorePanel">Równanie: <span id="eqText"></span></div>
+      <canvas id="gameBoard"></canvas>
+      <div id="instruction">
+        Zbieraj cyfry. Uderz w czerwone klocki, by liczyć. Krawędź = Backspace.
+      </div>
+    </div>
+
     <script src="js/Snake.js"></script>
+    <script src="js/Digit.js"></script>
+    <script src="js/Walls.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
